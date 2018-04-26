@@ -1,7 +1,7 @@
 {
   "name": "vscode-markdown-script",
   "displayName": "Markdown Script",
-  "description": "在 Markdown 中运行 shell 脚本",
+  "description": "A vscode extension to enhanced markdown code block",
   "version": "0.0.1",
   "publisher": "axetroy",
   "engines": {
@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/axetroy/vscode-markdown-script#readme",
   "keywords": [
-    "schema",
-    "json",
+    "markdown",
+    "script",
     "vscode",
     "extension"
   ],
