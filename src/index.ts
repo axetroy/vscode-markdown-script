@@ -68,7 +68,7 @@ export function activate(context: vscode.ExtensionContext) {
             {
               title: localize("ext.btn.click2copy"), // click to copy
               command: Command.Copy,
-              arguments: [start, end]
+              arguments: [script]
             }
           )
         ];
@@ -124,17 +124,13 @@ export function activate(context: vscode.ExtensionContext) {
   );
 
   context.subscriptions.push(
-    vscode.commands.registerCommand(
-      Command.Copy,
-      async (start: vscode.Position, end: vscode.Position) => {
-        const editor = vscode.window.activeTextEditor;
-        if (!editor) {
-          return [];
-        }
-        editor.selection = new vscode.Selection(start, end);
-        vscode.commands.executeCommand("editor.action.clipboardCopyAction");
+    vscode.commands.registerCommand(Command.Copy, async (content: string) => {
+      const editor = vscode.window.activeTextEditor;
+      if (!editor) {
+        return [];
       }
-    )
+      await vscode.env.clipboard.writeText(content);
+    })
   );
 }
 
