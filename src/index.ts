@@ -125,10 +125,6 @@ export function activate(context: vscode.ExtensionContext) {
 
   context.subscriptions.push(
     vscode.commands.registerCommand(Command.Copy, async (content: string) => {
-      const editor = vscode.window.activeTextEditor;
-      if (!editor) {
-        return [];
-      }
       await vscode.env.clipboard.writeText(content);
     })
   );
