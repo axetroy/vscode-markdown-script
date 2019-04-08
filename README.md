@@ -1,5 +1,7 @@
 # vscode-markdown-script
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/axetroy/vscode-markdown-script.svg)](https://greenkeeper.io/)
+
 A vscode extension to enhanced markdown code block.
 
 - [x] Run shell code
